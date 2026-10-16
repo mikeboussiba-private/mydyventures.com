@@ -39,3 +39,7 @@ Open http://localhost:8150. Use HTTP, not `file://`: links are root-absolute.
 ## Deploy
 
 Pushing to `main` deploys. `CNAME` holds the custom domain; `.nojekyll` turns off Jekyll processing.
+
+## After deploying
+
+`python3 tools/indexnow.py .` pings Bing/Yandex (IndexNow) with every sitemap URL, once GitHub Pages has published. Google reads `sitemap.xml` via Search Console instead.
